@@ -19,4 +19,6 @@ Son derece güvenlidir, altyapısında Laravel kullanılmıştır. Ve ayrıca No
 
 ## Kurulum
 
-Github'dan dosyaları indirdikten sonra hosting'inize dosyaları yükleyin. Sonra sitenizi açın ve **taa-daa** siteniz hazır! Yaklaşık kurulum işlemi 2 dakika bile sürmemektedir.
+- İlk olarak dosyaları masaüstünüze indirin.
+- Bu işlemden sonra tüm dosyaları hostinginize yükleyin.
+- 

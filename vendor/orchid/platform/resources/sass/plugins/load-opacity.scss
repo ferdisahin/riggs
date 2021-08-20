@@ -1,0 +1,30 @@
+.turbo-progress-bar {
+  height:           2px;
+  background-color: $primary;
+}
+
+.dropdown-menu {
+  &.show {
+    animation: smooth-appearance 240ms ease-in;
+  }
+}
+
+.media-results *{
+  animation: smooth-appearance 240ms ease-in;
+}
+
+
+@keyframes smooth-appearance {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
