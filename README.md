@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.ibb.co/SdhZxbk/logo.png" width="300"></p>
+<p align="center"><img src="https://i.ibb.co/SdhZxbk/logo.png" width="200"></p>
 
 # Riggs Hakkında
 

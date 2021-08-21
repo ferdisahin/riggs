@@ -60,8 +60,7 @@ class UserProfileScreen extends Screen
     /**
      * @return \Orchid\Screen\Layout[]
      */
-    public function layout(): array
-    {
+    public function layout(): array{
         return [
             Layout::block(UserEditLayout::class)
                 ->title(__('Profile Information'))
