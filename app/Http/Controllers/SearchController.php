@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller{
     public function index(Request $request){
-        $posts = Post::where("title", "LIKE", "%" . $request->kelime . "%")->paginate(10);
+        $posts = Post::where('show_home', '!=', 'hide')->where('status', 'publish')->where("title", "LIKE", "%" . $request->kelime . "%")->paginate(10);
         return view('index', compact(['posts']));
     }
 }

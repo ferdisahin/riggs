@@ -28,9 +28,12 @@
         <meta name="turbo-cache-control" content="no-cache">
     @endif
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script src="{{ orchid_mix('/js/manifest.js','orchid') }}" type="text/javascript"></script>
     <script src="{{ orchid_mix('/js/vendor.js','orchid') }}" type="text/javascript"></script>
     <script src="{{ orchid_mix('/js/orchid.js','orchid') }}" type="text/javascript"></script>
+
 
     @foreach(Dashboard::getResource('stylesheets') as $stylesheet)
         <link rel="stylesheet" href="{{  $stylesheet }}">
@@ -41,6 +44,9 @@
     @foreach(Dashboard::getResource('scripts') as $scripts)
         <script src="{{  $scripts }}" defer type="text/javascript"></script>
     @endforeach
+
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
 </head>
 
 <body>
@@ -63,9 +69,6 @@
 
     @include('platform::partials.toast')
 </div>
-
 @stack('scripts')
-
-
 </body>
 </html>

@@ -17,9 +17,11 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->char('slug', 255);
-            $table->text('body');
+            $table->longText('body');
             $table->integer('cat_id')->nullable();
-            $table->string('cover');
+            $table->string('cover')->nullable();
+            $table->char('show_home', 255)->nullable();
+            $table->enum('status', ['publish', 'draft'])->default('publish');
             $table->timestamps();
         });
     }

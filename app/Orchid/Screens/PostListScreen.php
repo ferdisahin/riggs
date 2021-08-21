@@ -22,10 +22,9 @@ class PostListScreen extends Screen
      *
      * @return array
      */
-    public function query(): array
-    {
+    public function query(): array{
         return [
-            'posts' => Post::paginate()
+            'posts' => Post::orderBy('id', 'desc')->paginate(10)
         ];
     }
 

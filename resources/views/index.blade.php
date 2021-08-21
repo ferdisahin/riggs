@@ -6,7 +6,7 @@
         @foreach($posts as $post)
             <div class="flex flex-col">
                 <a class="mb-5 block" href="{{route('post.show', ['cat' => $post->category->slug, 'post' => $post->slug])}}">
-                    <img class="w-full h-[200px] object-cover" src="{{$post->cover}}" alt="">
+                    <img class="w-full h-[200px] object-cover" src="@if($post->cover){{$post->cover}}@else{{asset('images/noimage.jpg')}}@endif" alt="{{$post->title}}">
                 </a>
                 <a href="{{route('post.show', ['cat' => $post->category->slug, 'post' => $post->slug])}}" class="title text-lg font-bold inline-block">{{$post->title}}</a>
 

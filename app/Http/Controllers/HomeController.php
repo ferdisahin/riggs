@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller{
     public function index(){
-        $posts = Post::orderBy('id', 'desc')->paginate(10);
+        $posts = Post::where('show_home', '!=', 'hide')->where('status', 'publish')->orderBy('id', 'desc')->paginate(9);
         return view('index', compact(['posts']));
     }
 }

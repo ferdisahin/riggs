@@ -15,13 +15,35 @@ Son derece güvenlidir, altyapısında Laravel kullanılmıştır. Ve ayrıca No
 - Hızlı ve Minimal Arayüz
 - 2 dakikada kurulum
 
-### Planlanan Gelecek Özellikler?
+### Planlanan Gelecek Özellikler
 
 - [ ] Yorum Yapma Alanı
+- [ ] Sosyal Ağ Butonları
+- [ ] Kod Alanı Paylaşımı (Gist) (🤯)
+- [ ] Sitemap
+- [ ] Menü Yönetimi
 
 ### Kurulum
 
-Kurulum işlemi oldukça basittir. Dosyaları indirip hostinginize yükledikten sonra direkt olarak sitenizi açabilirsiniz.
+Kurulum işlemi oldukça basittir. Dosyaları indirip hostinginize yükleyin.
+
+Bu işlemden sonra .env.example dosyasının adını .env olarak değiştirin.
+
+**.env** dosyasını düzenleme modunda açın ve **DB_CONNECTION=mysql** kısmını **DB_CONNECTION=sqlite** olarak değiştirin.
+
+Ve altındaki bu bilgileri silin.
+
+```
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+Bu işlemden sonra **APP_URL=http://localhost** kısmını bulun ve site adresiniz ile değiştirin. 
+
+Bunu da yaptıktan sonra şimdi dosyayı kaydedip sitenizi açabilirsiniz.
 
 ### Kullanıcı Bilgileri
 

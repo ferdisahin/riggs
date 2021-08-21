@@ -13,7 +13,7 @@ class Post extends Model{
     use AsSource;
     use Sluggable;
 
-    protected $fillable = ['title', 'slug', 'body', 'cat_id', 'cover'];
+    protected $fillable = ['title', 'slug', 'body', 'cat_id', 'cover', 'status', 'show_home'];
 
     public function sluggable(): array{
         return [

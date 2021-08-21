@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller{
     public function show($cat, $slug){
-        $post = Post::where('slug', $slug)->first();
+        $post = Post::where('slug', $slug)->firstOrFail();
         $category = Category::where('slug', $cat)->firstOrFail();
 
         if($category->id != $post->cat_id){

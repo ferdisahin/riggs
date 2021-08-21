@@ -25,7 +25,7 @@ class PlatformProvider extends OrchidServiceProvider
      */
     public function registerMainMenu(): array{
         return [
-            Menu::make('Gösterge Paneli')->icon('speedometer')->route('platform.main')->title('Navigation'),
+            Menu::make('Gösterge Paneli')->icon('speedometer')->route('platform.main')->title('Genel'),
 
             Menu::make('Yazılar')->icon('pencil')->route('platform.post.list')->title('İçerik'),
             Menu::make('Kategoriler')->icon('list')->route('platform.category.list'),

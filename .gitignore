@@ -12,3 +12,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/database/seeders/CategoriesSeeder.php
+/database/seeders/PostsSeeder.php
+.gitignore

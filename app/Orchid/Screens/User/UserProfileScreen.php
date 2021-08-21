@@ -24,14 +24,14 @@ class UserProfileScreen extends Screen
      *
      * @var string
      */
-    public $name = 'My account';
+    public $name = 'Profil';
 
     /**
      * Display header description.
      *
      * @var string
      */
-    public $description = 'Update your account details such as name, email address and password';
+    public $description = 'Buradan profil bilgilerinizi değiştirebilirsiniz.';
 
     /**
      * Query data.
@@ -63,8 +63,8 @@ class UserProfileScreen extends Screen
     public function layout(): array{
         return [
             Layout::block(UserEditLayout::class)
-                ->title(__('Profile Information'))
-                ->description(__("Update your account's profile information and email address."))
+                ->title(__('Profil Bilgileri'))
+                ->description(__("Kullanıcı adı ve E-Postayı buradan değiştirebilirsiniz."))
                 ->commands(
                     Button::make(__('Save'))
                         ->type(Color::DEFAULT())
@@ -73,10 +73,10 @@ class UserProfileScreen extends Screen
                 ),
 
             Layout::block(ProfilePasswordLayout::class)
-                ->title(__('Update Password'))
-                ->description(__('Ensure your account is using a long, random password to stay secure.'))
+                ->title(__('Şifre Güncelle'))
+                ->description(__('Şifrenizi güvenli ve uzun oluşturun. Bu sitenizi güvende tutmaya yarar.'))
                 ->commands(
-                    Button::make(__('Update password'))
+                    Button::make(__('Şifreyi Güncelle'))
                         ->type(Color::DEFAULT())
                         ->icon('check')
                         ->method('changePassword')

@@ -11,6 +11,8 @@ use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Picture;
 use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Fields\Relation;
+use Orchid\Screen\Fields\Select;
+use Orchid\Screen\Fields\SimpleMDE;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Alert;
 use Orchid\Support\Facades\Layout;
@@ -61,9 +63,22 @@ class PostEditScreen extends Screen{
             Layout::rows([
                 Input::make('post.title')->title('Başlık')->placeholder('Yazı Başlığı')->required(),
                 Input::make('post.slug')->title('Kısa Bağlantı')->canSee($this->exists)->required(),
-                Quill::make('post.body')->title('İçerik'),
+                //Quill::make('post.body')->title('İçerik'),
+                SimpleMDE::make('post.body'),
                 Relation::make('post.cat_id')->title('Kategori')->fromModel(Category::class, 'title')->required(),
-                Picture::make('post.cover')->targetRelativeUrl()
+                Picture::make('post.cover')->targetRelativeUrl(),
+                Select::make('post.status')
+                    ->options([
+                        'publish'   => 'Yayında',
+                        'draft' => 'Taslak',
+                    ])
+                    ->title('Yazı Durumu'),
+                Select::make('post.show_home')
+                    ->options([
+                        'show'   => 'Göster',
+                        'hide' => 'Gizle',
+                    ])
+                    ->title('Anasayfada Göster'),
             ])
         ];
     }

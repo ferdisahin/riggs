@@ -37,6 +37,13 @@ class PostListLayout extends Table
             TD::make('slug', 'Kısa Bağlantı'),
             TD::make('cat_id', 'Kategori')->render(function (Post $post){
                 return $post->category->title;
+            }),
+            TD::make('status', 'Durum')->render(function (Post $post){
+                if($post->status == 'publish'){
+                    return 'Yayında';
+                }else{
+                    return 'Taslak';
+                }
             })
         ];
     }

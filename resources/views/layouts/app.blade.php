@@ -59,7 +59,7 @@
 @endif
 
 <!-- MAIN START -->
-<main id="main" class="mt-10">
+<main id="main" class="my-10">
     <div class="container mx-auto">
         @yield('content')
     </div>
