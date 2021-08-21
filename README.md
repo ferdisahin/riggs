@@ -1,3 +1,5 @@
+<p align="center"><img src="https://i.ibb.co/SdhZxbk/logo.png" width="300"></p>
+
 # Riggs Hakkında
 
 Herkese merhaba, Riggs yazılımını yaklaşık olarak 24 saatte (**Evet doğru duydunuz sabah 8:00'de başlayıp akşam 20:00'da bitirdim**) kendi sitem için yapmıştım. Ancak daha sonra açık kaynak kodlu olarak dağıtmaya karar verdim. Sürekli güncelleyip yenilikler getirmeyi düşünüyorum.
